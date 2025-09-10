@@ -94,7 +94,7 @@ function App(){
       <Main> 
         {status === "loading" && <Loading />}
         {status === "error" && <ErrorScreen />}
-        {status === "ready" && <StartScreen dispatch={dispatch}/>}
+        {status === "ready" && <StartScreen dispatch={dispatch} numQuestions={numQuestions}/>}
         {status === "active" && <>
           <Progress numQuestions={numQuestions} index={index} score={score}/>
           <Question dispatch={dispatch} questions={questions} index={index} answer={answer} numQuestions={numQuestions}/>
